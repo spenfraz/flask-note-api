@@ -1,0 +1,16 @@
+DROP DATABASE IF EXISTS notesdb; 
+create DATABASE notesdb;
+use notesdb;
+
+DROP TABLE IF EXISTS note;
+
+CREATE TABLE note (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title varchar(128) NOT NULL, body TEXT NOT NULL, parent_id INT NOT NULL);
+
+LOAD DATA INFILE '/path/to/csv/file.csv' 
+INTO TABLE note 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+SELECT * from note;
