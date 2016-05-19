@@ -1,1 +1,1 @@
-# flask-note-api
+# flask-mysql-note-api
