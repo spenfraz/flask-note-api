@@ -53,11 +53,11 @@ def note(note_id):
 def add():
     if not request.json or not 'title' in request.json:
         abort(400)
-    note = Note(request.json['title'], request.json['body'],)
+    note = Note(request.json['title'], request.json['body'])
     json_results = {
         'title': request.json['title'],
         'body': request.json['body'],
-        'parent_id': request.json['parent_id']
+        'parent_id': -1
     }
     db.session.add(note)
     db.session.commit()
