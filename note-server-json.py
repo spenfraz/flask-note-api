@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
