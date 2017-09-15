@@ -49,7 +49,7 @@ def note(note_id):
             json_results.append(d)
         return jsonify(items=json_results)
 
-@app.route('/notes/api/v1/add', methods=['POST'])
+@app.route('/notes/api/v1/notes', methods=['POST'])
 def add():
     if not request.json or not 'title' in request.json:
         abort(400)
@@ -82,7 +82,7 @@ def branch(parent_id):
     db.session.commit()
     return jsonify(items=json_results), 201
 
-@app.route('/notes/api/v1/delete/<int:note_id>')
+@app.route('/notes/api/v1/notes/<int:note_id>', methods=['DELETE'])
 def delete(note_id):
     result = Note.query.filter_by(id=note_id).first()
     
