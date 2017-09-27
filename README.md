@@ -59,6 +59,6 @@
 
         curl -i http://localhost:5000/notes/api/v1/notes
 
-        curl -i -H "Content-Type: application/json" -X POST -d '{"title":"title","body":"body"}' http://localhost:5000/notes/api/v1/add
+        curl -i -H "Content-Type: application/json" -X POST -d '{"title":"title","body":"body"}' http://localhost:5000/notes/api/v1/notes
 
       
