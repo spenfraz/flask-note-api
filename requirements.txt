@@ -1,9 +1,9 @@
-click==6.6
-Flask==0.12.2
+click==7.0
+Flask==1.0.2
 Flask-SQLAlchemy==2.3.2
-itsdangerous==0.24
-Jinja2==2.8
-MarkupSafe==0.23
+itsdangerous==1.1.0
+Jinja2==2.10
+MarkupSafe==1.1.0
 PyMySQL==0.9.3
 SQLAlchemy==1.2.18
 Werkzeug==0.14.1
