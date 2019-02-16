@@ -1,5 +1,13 @@
 from flask import Flask, request, jsonify, abort
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
+
+#workaround for:  no MySQLdb for python3.x
+#solution: pymysql provides MySQLdb like interface
+try:
+    import pymysql
+    pymysql.install_as_MySQLdb()
+except ImportError:
+    pass
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
