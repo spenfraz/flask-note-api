@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS note;
 
 CREATE TABLE note (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title varchar(128) NOT NULL, body TEXT NOT NULL, parent_id INT NOT NULL);
 
-LOAD DATA INFILE '/path/to/csv/file.csv' 
+LOAD DATA LOCAL INFILE '/path/to/csv/file.csv' 
 INTO TABLE note 
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"'
