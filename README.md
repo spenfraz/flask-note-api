@@ -1,5 +1,5 @@
 # flask-mysql-note-api
-
+dev. environment ==> https://github.com/spenfraz/vagrant-dev-envs/tree/ansible_local
 
 ### 1. Download & Install Python (2.7.x)
   --> https://wiki.python.org/moin/BeginnersGuide/Download
